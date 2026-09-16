@@ -3,6 +3,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductosModule } from './productos/productos.module';
 
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -22,5 +25,7 @@ import { ProductosModule } from './productos/productos.module';
     }),
     ProductosModule,
   ],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule { }
