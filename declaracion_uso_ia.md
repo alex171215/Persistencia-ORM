@@ -1,0 +1,11 @@
+### Declaración de uso de IA
+- Herramienta(s): Antigravity AI (Gemini 3.1 Pro / 3.6 Flash)
+- Nivel de uso: Nivel 2–3 (Borrador / Revisor)
+- Qué se le pidió:
+  - Diagnóstico y resolución del error de conexión de TypeORM con PostgreSQL (`SASL: client password must be a string`).
+  - Explicación de los SQL generados por los métodos de TypeORM Repository (`find`, `findOneBy`, `save`, `delete`).
+  - Explicación y comparación de alternativas a `synchronize: true` para entornos de producción.
+- Qué se modificó/verificó manualmente:
+  - Creación y verificación del archivo `.env` con las credenciales de la base de datos PostgreSQL.
+  - Implementación de la entidad `Producto`, DTOs con validaciones (`class-validator`) y los métodos en `ProductosService`.
+  - Verificación del funcionamiento mediante terminal interactiva ejecutando consultas SQL directas en el contenedor de Docker (`docker exec -it pg-productos psql`).
