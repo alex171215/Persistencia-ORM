@@ -7,11 +7,14 @@ import { ActualizarPrecioDto } from './dto/actualizar-precio.dto.js';
 import { Delete } from '@nestjs/common';
 import { Query } from '@nestjs/common';
 
+import { ApiQuery } from '@nestjs/swagger';
+
 @Controller('api/v1/productos')
 export class ProductosController {
     constructor(private readonly productosService: ProductosService) { }
 
     @Get()
+    @ApiQuery({ name: 'nombre', required: false, type: String })
     listar(@Query('nombre') nombre?: string) {
         return this.productosService.findAll(nombre);
     }
