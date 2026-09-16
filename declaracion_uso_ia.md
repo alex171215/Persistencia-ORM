@@ -9,3 +9,9 @@
   - Creación y verificación del archivo `.env` con las credenciales de la base de datos PostgreSQL.
   - Implementación de la entidad `Producto`, DTOs con validaciones (`class-validator`) y los métodos en `ProductosService`.
   - Verificación del funcionamiento mediante terminal interactiva ejecutando consultas SQL directas en el contenedor de Docker (`docker exec -it pg-productos psql`).
+  - Diagnóstico y resolución de errores de conexión (`SASL: client password must be a string`) y configuración de ESM en tests de Jest.
+  - Explicación sobre qué SQL generan los métodos de TypeORM Repository y las alternativas a `synchronize: true` para producción.
+  - Creación del archivo de infraestructura `render.yaml` (Blueprint) y explicación de los conceptos de Docker y Render.
+- **Qué se modificó/verificó manualmente:**
+  - Verificación del archivo `.env` y de los archivos `.yaml` de GitHub Actions y Render.
+  - Comprobación del funcionamiento del CRUD completo interactuando manualmente mediante Docker (`docker exec`) y la plataforma Swagger en local.
